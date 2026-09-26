@@ -119,7 +119,7 @@ h1,h2,h3{font-weight:normal}
 @keyframes balloonUp{0%{opacity:0;transform:translateY(0) rotate(-8deg)}12%{opacity:.75}100%{opacity:0;transform:translateY(-440px) rotate(12deg)}}
 
 
-.wish-form{display:flex;flex-direction:column;gap:14px;margin-top:20px;text-align:left}.wish-form label{font-size:14px;color:#633e48}.wish-form input,.wish-form textarea{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(95,62,69,.28);background:rgba(255,255,255,.72);color:#593f45;font:inherit;outline:none;border-radius:8px}.wish-form textarea{min-height:105px;resize:vertical}.wish-submit{border:0;cursor:pointer}.wish-note{font-size:13px;opacity:.75;text-align:center;margin-top:10px}.wish-success{display:none;margin-top:18px}
+.wish-form{display:flex;flex-direction:column;gap:14px;margin-top:20px;text-align:left}.wish-form label{font-size:14px;color:#633e48}.wish-form input,.wish-form textarea{width:100%;padding:13px 14px;border:1px solid rgba(95,62,69,.28);background:rgba(255,255,255,.72);color:#593f45;font:inherit;outline:none;border-radius:8px}.wish-form textarea{min-height:105px;resize:vertical}.wish-submit{border:1px solid #80616a;background:#f1d9df;color:#5b3d45;padding:13px 20px;cursor:pointer}.wish-note{font-size:13px;opacity:.75;text-align:center;margin-top:10px}
 </style>
 </head>
 <body>
@@ -156,6 +156,7 @@ h1,h2,h3{font-weight:normal}
     <div class="card" onclick="openSection('reasons','rishte.mp3')"><div class="icon">🌷</div><h3>Reasons Why I Love You</h3><p>So many little reasons</p></div>
     <div class="card" onclick="openSection('forget','tumtak.mp3')"><div class="icon">🌙</div><h3>Things I Hope You Never Forget</h3><p>A little reminder</p></div>
     <div class="card" onclick="openSection('last','dariya.mp3')"><div class="icon">🎁</div><h3>One Last Surprise</h3><p>Don't leave yet...</p></div>
+    <div class="card" onclick="openSection('wishlist','happy.mp3')"><div class="icon">🎁</div><h3>Your Birthday Wishlist</h3><p>Tell me your wishes & gifts</p></div>
   </div>
 
   <section class="section" id="birthday">
@@ -246,6 +247,7 @@ More than these words can ever explain. 🫶🏻❤️
 — Yours, Vanshuu 🌷</div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
+
   <section class="section" id="sad">
     <h2 class="title">Babyy Gurll 🥺❤️</h2>
     <div class="letter">Agar kabhi aapka mood bahut low ho, dil heavy sa lage, ya bina kisi reason ke bas rona aaye… toh ek baar ye message padh lena. 🫂
@@ -269,7 +271,6 @@ Aapko khush dekhna bahut achha lagta hai. 🥹💗
 Ab ek tiny si smile please… sirf mere liye. 🫶🏻🌷</div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
-
   <section class="section" id="happy">
     <h2 class="title">Babyy Gurll 🥹❤️</h2>
     <div class="letter">Jab aap khush hoti ho na, pata nahi kyun mujhe bhi andar se ek alag hi sukoon milta hai. 🫶🏻
@@ -402,7 +403,7 @@ My answer will simply be—
 And there will always be something about you that no one else can replace.” 🫶🏻❤️</div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
-  
+
   <section class="section" id="reasons">
     <h2 class="title">Reasons Why I Love My Babyy Gurll 🥹❤️</h2>
     <div class="letter">Babyy Gurll,
@@ -479,28 +480,27 @@ And you deserve beautiful things. 🫶🏻</div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
 
-  <section class="section" id="wishlist">
-<h2 class="title">Your Birthday Wishlist 🎁❤️</h2>
-<div class="letter">
-<p>Ab aapki baari... jo dil mein hai, mujhe batao. 🥹🌷</p>
-<form id="wishForm" class="wish-form">
-<label>🎂 Aapki birthday wish kya hai?</label>
-<textarea name="birthday_wish" placeholder="Jo wish aap chahti ho..." required></textarea>
-<label>🎁 Aapko kaunse gifts chahiye?</label>
-<textarea name="gifts" placeholder="Gifts ki list yahan likho..."></textarea>
-<label>💗 Koi specific gift jo aap mujhse chahti ho?</label>
-<input name="special_gift" placeholder="Agar koi special gift hai...">
-<label>🌸 Aur kuch jo aap mujhe batana chahti ho?</label>
-<textarea name="message" placeholder="Anything else..."></textarea>
-<button class="turn-page wish-submit" type="submit">Send My Wishes 💌</button>
-</form>
-<p class="wish-note">Submit karte hi WhatsApp khulega aur message ready milega. Bas Send dabana hai. ❤️</p>
-<div id="wishSuccess" class="letter wish-success"><p>Wishes ready hain. Ab WhatsApp mein bas Send karna hai. 🤫❤️</p></div>
-</div>
-<button class="back" onclick="goBack()">← Back</button>
-</section>
 
-<section class="section" id="last">
+  <section class="section" id="wishlist">
+    <h2 class="title">Your Birthday Wishlist 🎁❤️</h2>
+    <div class="letter">
+      <p>Ab aapki baari... jo dil mein hai, mujhe batao. 🥹🌷</p>
+      <form id="wishForm" class="wish-form">
+        <label>🎂 Aapki birthday wish kya hai?</label>
+        <textarea name="birthday_wish" placeholder="Jo wish aap chahti ho..." required></textarea>
+        <label>🎁 Aapko kaunse gifts chahiye?</label>
+        <textarea name="gifts" placeholder="Gifts ki list yahan likho..."></textarea>
+        <label>💗 Koi specific gift jo aap mujhse chahti ho?</label>
+        <input name="special_gift" placeholder="Agar koi special gift hai...">
+        <label>🌸 Aur kuch jo aap mujhe batana chahti ho?</label>
+        <textarea name="message" placeholder="Anything else..."></textarea>
+        <button class="wish-submit" type="submit">Send My Wishes on WhatsApp 💌</button>
+      </form>
+      <p class="wish-note">Submit karne ke baad aapke WhatsApp mein message ready hoga. Bas Send dabana hai. ❤️</p>
+    </div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+  <section class="section" id="last">
     <h2 class="title">ONE LAST SURPRISE… 🎁</h2>
     <div class="letter">Babyy Gurll,
 agar aap yahan tak aa gayi ho, toh congratulations…
@@ -559,7 +559,6 @@ Vanshuu 🫶🏻</div>
     </div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
-
   <section class="section" id="photos">
     <h2 class="title">A Few Little Memories 📸</h2>
     <p class="photo-note">Bas photos ko repository mein <b>A.jpg, B.jpg, C.jpg, D.jpg, E.jpg, F.jpg</b> naam se save kar dena. ❤️</p>
@@ -673,7 +672,15 @@ const loves=[
 document.getElementById('loveList').innerHTML=loves.map((x,i)=>`<div class="love-line">${i+1}. ${x}</div>`).join('');
 
 const wishForm=document.getElementById('wishForm');
-if(wishForm){wishForm.addEventListener('submit',function(e){e.preventDefault();const f=new FormData(wishForm);const msg=`🎁 *Birthday Wishlist*\n\n🎂 *Birthday Wish:* ${f.get('birthday_wish')||'-'}\n\n🎁 *Gifts she wants:* ${f.get('gifts')||'-'}\n\n💗 *Special gift from me:* ${f.get('special_gift')||'-'}\n\n🌸 *Anything else:* ${f.get('message')||'-'}`;const url='https://wa.me/918933000186?text='+encodeURIComponent(msg);window.open(url,'_blank');document.getElementById('wishSuccess').style.display='block';});}
+if(wishForm){
+  wishForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    const f=new FormData(wishForm);
+    const msg=`🎁 *Birthday Wishlist*\n\n🎂 *Birthday Wish:* ${f.get('birthday_wish')||'-'}\n\n🎁 *Gifts she wants:* ${f.get('gifts')||'-'}\n\n💗 *Special gift from me:* ${f.get('special_gift')||'-'}\n\n🌸 *Anything else:* ${f.get('message')||'-'}`;
+    const url='https://wa.me/918933000186?text='+encodeURIComponent(msg);
+    window.location.href=url;
+  });
+}
 </script>
 </body>
 </html>
