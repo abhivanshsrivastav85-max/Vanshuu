@@ -97,10 +97,31 @@ h1,h2,h3{font-weight:normal}
  .card{min-height:132px}.section{padding:25px 17px 34px}.title{font-size:26px}
  .text{font-size:15px}.gallery{gap:9px}
 }
+
+/* Birthday Celebration Animation */
+.bday-celebration{position:relative;text-align:center;overflow:hidden;margin:0 -2px 24px;padding:28px 10px 24px;min-height:330px;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.95),rgba(255,232,239,.72) 48%,rgba(255,248,244,.2) 100%);border-radius:18px}
+.bday-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,8vw,58px);color:#8b4d62;text-shadow:0 2px 12px rgba(139,77,98,.18);opacity:0;transform:scale(.65);animation:bdayTitle 1.2s .5s cubic-bezier(.2,1.4,.4,1) forwards}
+.bday-sub{font-size:16px;margin:8px 0 14px;opacity:0;animation:bdayFade .8s 1.25s forwards}
+.bday-cake{font-size:90px;line-height:1;margin:12px 0 8px;opacity:0;transform:translateY(35px) scale(.7);animation:cakeIn 1s .9s cubic-bezier(.2,1.3,.4,1) forwards,bdayBounce 1.8s 2s ease-in-out infinite}
+.bday-cake .flame{display:inline-block;font-size:30px;vertical-align:top;animation:flame 1s ease-in-out infinite alternate}
+.bday-confetti{position:absolute;inset:0;pointer-events:none}
+.bday-confetti i{position:absolute;top:-20px;width:8px;height:15px;border-radius:2px;opacity:0;animation:confettiFall 3.2s linear infinite}
+.bday-confetti i:nth-child(1){left:8%;animation-delay:.1s}.bday-confetti i:nth-child(2){left:18%;animation-delay:.8s}.bday-confetti i:nth-child(3){left:29%;animation-delay:1.4s}.bday-confetti i:nth-child(4){left:42%;animation-delay:.3s}.bday-confetti i:nth-child(5){left:55%;animation-delay:1.1s}.bday-confetti i:nth-child(6){left:68%;animation-delay:.5s}.bday-confetti i:nth-child(7){left:79%;animation-delay:1.7s}.bday-confetti i:nth-child(8){left:90%;animation-delay:.9s}.bday-confetti i:nth-child(9){left:14%;animation-delay:2s}.bday-confetti i:nth-child(10){left:86%;animation-delay:2.2s}
+.bday-balloons span{position:absolute;bottom:-100px;font-size:50px;opacity:0;animation:balloonUp 5s ease-in infinite}
+.bday-balloons span:nth-child(1){left:4%;animation-delay:.2s}.bday-balloons span:nth-child(2){left:20%;animation-delay:1.5s}.bday-balloons span:nth-child(3){right:20%;animation-delay:.9s}.bday-balloons span:nth-child(4){right:4%;animation-delay:2s}
+.bday-wish{display:inline-block;margin-top:10px;padding:10px 18px;border:1px solid rgba(139,77,98,.25);border-radius:999px;background:rgba(255,255,255,.62);opacity:0;animation:bdayFade .8s 1.6s forwards}
+@keyframes bdayTitle{to{opacity:1;transform:scale(1)}}
+@keyframes bdayFade{to{opacity:1}}
+@keyframes cakeIn{to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes bdayBounce{50%{transform:translateY(-8px) scale(1.02)}}
+@keyframes flame{to{transform:scale(1.18) rotate(3deg);opacity:.72}}
+@keyframes confettiFall{0%{opacity:0;transform:translateY(0) rotate(0)}12%{opacity:1}100%{opacity:.75;transform:translateY(370px) rotate(500deg)}}
+@keyframes balloonUp{0%{opacity:0;transform:translateY(0) rotate(-8deg)}12%{opacity:.75}100%{opacity:0;transform:translateY(-440px) rotate(12deg)}}
+
 </style>
 </head>
 <body>
-    
+  
 <div class="float f1">♡</div><div class="float f2">♡</div><div class="float f3">♥</div><div class="float f4">♡</div><div class="float f5">♥</div>
 
 <audio id="music" loop preload="auto"></audio>
@@ -137,7 +158,16 @@ h1,h2,h3{font-weight:normal}
 
   <section class="section" id="birthday">
     <h2 class="title">Happy Birthday, Meri Babyy Gurll ❤️🎂</h2>
-    <div class="cake">🎂</div><div class="confetti">✨ 🌸 ✨</div>
+    <div class="bday-celebration">
+  <div class="bday-confetti">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+  <div class="bday-balloons"><span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span></div>
+  <div class="bday-title">HAPPY BIRTHDAY 💗</div>
+  <div class="bday-cake">🎂<span class="flame">✨</span></div>
+  <div class="bday-sub">Meri Babyy Gurll… aaj ka din sirf aapke naam. 🌸</div>
+  <div class="bday-wish">Make a wish… 🥹❤️</div>
+</div>
     <div class="letter">Pata hai, aaj ka din mere liye itna special kyun hai?
 
 Kyuki aaj us insaan ka birthday hai, jiska naam sunte hi mere face par automatically ek smile aa jaati hai…
@@ -238,7 +268,7 @@ Aapko khush dekhna bahut achha lagta hai. 🥹💗
 Ab ek tiny si smile please… sirf mere liye. 🫶🏻🌷</div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
-  
+
   <section class="section" id="happy">
     <h2 class="title">Babyy Gurll 🥹❤️</h2>
     <div class="letter">Jab aap khush hoti ho na, pata nahi kyun mujhe bhi andar se ek alag hi sukoon milta hai. 🫶🏻
@@ -447,7 +477,6 @@ You are precious.
 And you deserve beautiful things. 🫶🏻</div>
     <button class="back" onclick="goBack()">← Back</button>
   </section>
-
   <section class="section" id="last">
     <h2 class="title">ONE LAST SURPRISE… 🎁</h2>
     <div class="letter">Babyy Gurll,
@@ -568,11 +597,23 @@ function openLetter(){document.getElementById('loveLetter').classList.add('show'
 function showVideos(){document.getElementById('videos').style.display='block'}
 function playVideo(file){
   const viewer=document.getElementById('viewer'), v=document.getElementById('bigVideo');
-  v.src=file; viewer.classList.add('show'); v.play().catch(()=>{});
+  // Background music pauses while the video plays, so the video's own audio is clear.
+  music.pause();
+  musicBtn.textContent='🎵 Music';
+  v.src=file;
+  viewer.classList.add('show');
+  v.currentTime=0;
+  v.play().catch(()=>{});
 }
 function closeVideo(){
-  const v=document.getElementById('bigVideo'); v.pause(); v.removeAttribute('src'); v.load();
+  const v=document.getElementById('bigVideo');
+  v.pause();
+  v.removeAttribute('src');
+  v.load();
   document.getElementById('viewer').classList.remove('show');
+  // Resume the music after closing the video.
+  music.play().catch(()=>{});
+  musicBtn.textContent='⏸ Music';
 }
 function toggleMusic(){
   if(music.paused){music.play().catch(()=>{});musicBtn.textContent='⏸ Music'}
