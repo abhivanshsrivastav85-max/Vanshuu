@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Babyy Gurll 💗</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    color:#563d43;
+    min-height:100vh;
+
+    background:
+        linear-gradient(rgba(255,245,248,0.18),
+                        rgba(255,245,248,0.18)),
+        url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+}
+
+/* Soft vintage overlay */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(255,245,248,0.12);
+    pointer-events:none;
+    z-index:-1;
+}
+
+
+/* ---------------- OPENING SCREEN ---------------- */
+
+.opening{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.opening-card{
+
+    width:100%;
+    max-width:500px;
+
+    padding:45px 25px;
+
+    background:rgba(255,248,246,0.72);
+
+    border:1px solid rgba(120,75,80,0.25);
+
+    box-shadow:
+        0 15px 50px rgba(80,45,50,0.18),
+        inset 0 0 30px rgba(255,255,255,0.5);
+
+    backdrop-filter:blur(3px);
+
+    animation:fadeIn 2s ease;
+}
+
+.small-text{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+    opacity:.75;
+}
+
+.opening h1{
+
+    font-size:42px;
+
+    font-weight:normal;
+
+    color:#633e48;
+
+    margin-bottom:18px;
+}
+
+.opening p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:32px;
+}
+
+.enter-btn{
+
+    padding:14px 30px;
+
+    border:1px solid #79535b;
+
+    background:rgba(255,255,255,.45);
+
+    color:#593c43;
+
+    font-family:Georgia,serif;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.enter-btn:hover{
+
+    background:#f4dfe5;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ---------------- MAIN WEBSITE ---------------- */
+
+#main{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:35px 18px 70px;
+
+    animation:fadeIn 1.5s ease;
+}
+
+.container{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+
+/* HEADER */
+
+.header{
+
+    text-align:center;
+
+    padding:45px 20px 35px;
+
+}
+
+.header .flower{
+
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.header h2{
+
+    font-size:36px;
+
+    font-weight:normal;
+
+    color:#603d45;
+
+}
+
+.header p{
+
+    margin-top:12px;
+
+    font-size:16px;
+
+    line-height:1.7;
+}
+
+
+/* MENU */
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:15px;
+}
+
+.card{
+
+    min-height:150px;
+
+    padding:25px 15px;
+
+    background:rgba(255,248,246,.76);
+
+    border:1px solid rgba(100,65,70,.25);
+
+    box-shadow:0 8px 25px rgba(90,50,55,.13);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,245,247,.9);
+
+    box-shadow:0 15px 35px rgba(90,50,55,.18);
+}
+
+.card-icon{
+
+    font-size:35px;
+
+    margin-bottom:12px;
+}
+
+.card h3{
+
+    font-size:18px;
+
+    font-weight:normal;
+
+    margin-bottom:7px;
+}
+
+.card p{
+
+    font-size:13px;
+
+    opacity:.75;
+}
+
+
+/* ---------------- SECTIONS ---------------- */
+
+.section{
+
+    display:none;
+
+    margin-top:35px;
+
+    padding:35px 25px;
+
+    background:rgba(255,249,247,.82);
+
+    border:1px solid rgba(100,65,70,.25);
+
+    box-shadow:0 10px 35px rgba(90,50,55,.15);
+
+    animation:fadeIn .7s ease;
+}
+
+.section.active{
+
+    display:block;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:29px;
+
+    font-weight:normal;
+
+    margin-bottom:22px;
+
+    color:#603d45;
+}
+
+.section-text{
+
+    font-size:17px;
+
+    line-height:2;
+
+    text-align:center;
+}
+
+
+/* BACK BUTTON */
+
+.back{
+
+    display:block;
+
+    margin:28px auto 0;
+
+    padding:10px 23px;
+
+    border:1px solid #80616a;
+
+    background:transparent;
+
+    color:#5d4148;
+
+    font-family:Georgia,serif;
+
+    cursor:pointer;
+}
+
+
+/* ---------------- LOVE LETTER ---------------- */
+
+.envelope{
+
+    width:180px;
+
+    height:120px;
+
+    margin:30px auto;
+
+    background:#e8cdd3;
+
+    border:1px solid #89636c;
+
+    position:relative;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(70,40,45,.2);
+}
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:0;
+
+    border-left:89px solid transparent;
+    border-right:89px solid transparent;
+    border-top:65px solid #d8b3bd;
+
+}
+
+.envelope span{
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:0;
+
+    right:0;
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+.letter{
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:28px 20px;
+
+    background:#fff8e9;
+
+    border:1px solid #b69a83;
+
+    box-shadow:inset 0 0 35px rgba(150,110,80,.12);
+
+    line-height:2;
+
+    font-size:16px;
+
+    text-align:left;
+
+}
+
+.letter.show{
+
+    display:block;
+
+    animation:fadeIn 1s ease;
+}
+
+
+/* ---------------- REASONS ---------------- */
+
+.reason{
+
+    padding:18px;
+
+    margin:12px 0;
+
+    background:rgba(255,238,242,.7);
+
+    border-left:3px solid #b77b89;
+
+    line-height:1.7;
+}
+
+
+/* ---------------- MEMORIES ---------------- */
+
+.memory-placeholder{
+
+    padding:35px 20px;
+
+    border:1px dashed #96737b;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    background:rgba(255,255,255,.3);
+
+}
+
+.memory-placeholder p{
+
+    line-height:1.8;
+
+}
+
+
+/* ---------------- BIRTHDAY ---------------- */
+
+.cake{
+
+    font-size:80px;
+
+    text-align:center;
+
+    margin:25px 0;
+
+    animation:bounce 2s infinite;
+}
+
+.confetti{
+
+    font-size:35px;
+
+    text-align:center;
+
+    letter-spacing:12px;
+
+}
+
+
+/* ---------------- FLOATING HEARTS ---------------- */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    font-size:20px;
+
+    opacity:.45;
+
+    animation:floatUp 8s linear infinite;
+
+    pointer-events:none;
+
+}
+
+.h1{left:8%;animation-delay:0s;}
+.h2{left:28%;animation-delay:2s;}
+.h3{left:55%;animation-delay:4s;}
+.h4{left:78%;animation-delay:1s;}
+.h5{left:90%;animation-delay:5s;}
+
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.5;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:600px){
+
+    .opening h1{
+        font-size:34px;
+    }
+
+    .opening p{
+        font-size:16px;
+    }
+
+    .menu{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .card{
+        min-height:135px;
+        padding:18px 10px;
+    }
+
+    .card-icon{
+        font-size:30px;
+    }
+
+    .card h3{
+        font-size:16px;
+    }
+
+    .section{
+        padding:28px 18px;
+    }
+
+    .section-title{
+        font-size:25px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FLOATING HEARTS -->
+
+<div class="heart h1">♡</div>
+<div class="heart h2">♡</div>
+<div class="heart h3">♥</div>
+<div class="heart h4">♡</div>
+<div class="heart h5">♥</div>
+
+
+<!-- ================= OPENING ================= -->
+
+<section class="opening" id="opening">
+
+    <div class="opening-card">
+
+        <div class="small-text">
+            A little something for you
+        </div>
+
+        <h1>
+            Hey Babyy Gurll... 💗
+        </h1>
+
+        <p>
+            I made a little world<br>
+            just for you.
+            <br><br>
+            Maybe it's not perfect,<br>
+            but every little part of it<br>
+            is made with love.
+        </p>
+
+        <button class="enter-btn" onclick="enterWebsite()">
+            Open Your Surprise ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<section id="main">
+
+<div class="container">
+
+
+    <div class="header">
+
+        <div class="flower">
+            🌸
+        </div>
+
+        <h2>
+            For My Babyy Gurll
+        </h2>
+
+        <p>
+            Welcome to your little corner of my heart. 💗
+        </p>
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <div class="menu">
+
+
+        <div class="card" onclick="openSection('birthday')">
+
+            <div class="card-icon">🎂</div>
+
+            <h3>
+                Birthday Surprise
+            </h3>
+
+            <p>
+                Your special day
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('sad')">
+
+            <div class="card-icon">🥹</div>
+
+            <h3>
+                When You're Sad
+            </h3>
+
+            <p>
+                Open this when you need comfort
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('happy')">
+
+            <div class="card-icon">🌸</div>
+
+            <h3>
+                When You're Happy
+            </h3>
+
+            <p>
+                For your beautiful smiles
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('emotional')">
+
+            <div class="card-icon">🫂</div>
+
+            <h3>
+                When You're Emotional
+            </h3>
+
+            <p>
+                A little reminder
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('letter')">
+
+            <div class="card-icon">💌</div>
+
+            <h3>
+                Special Love Letter
+            </h3>
+
+            <p>
+                Open my heart
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('memories')">
+
+            <div class="card-icon">📸</div>
+
+            <h3>
+                Our Memories
+            </h3>
+
+            <p>
+                Little moments
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('reasons')">
+
+            <div class="card-icon">💖</div>
+
+            <h3>
+                Why You're Special
+            </h3>
+
+            <p>
+                Just a few reasons
+            </p>
+
+        </div>
+
+
+        <div class="card" onclick="openSection('final')">
+
+            <div class="card-icon">🌙</div>
+
+            <h3>
+                One Last Surprise
+            </h3>
+
+            <p>
+                Don't leave yet...
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= BIRTHDAY ================= -->
+
+    <div class="section" id="birthday">
+
+        <h2 class="section-title">
+            Happy Birthday, Babyy Gurll 🎂
+        </h2>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <div class="confetti">
+            ✨ 🌸 ✨
+        </div>
+
+        <p class="section-text">
+
+            Today is your day. 🌸
+
+            <br><br>
+
+            I hope this new year of your life
+            brings you countless reasons to smile,
+            peaceful moments,
+            beautiful memories,
+            and everything your heart wishes for.
+
+            <br><br>
+
+            Happy Birthday to someone
+            who makes ordinary moments
+            feel a little more special. 💗
+
+        </p>
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= SAD ================= -->
+
+    <div class="section" id="sad">
+
+        <h2 class="section-title">
+            When You're Sad 🥹
+        </h2>
+
+        <p class="section-text">
+
+            Agar kabhi aap sad ho,
+            toh please ye yaad rakhna...
+
+            <br><br>
+
+            Aapko har waqt strong rehne ki
+            zaroorat nahi hai.
+
+            <br><br>
+
+            Kuch din difficult ho sakte hain,
+            kuch moments heavy ho sakte hain,
+            aur ye completely okay hai.
+
+            <br><br>
+
+            Bas ek bad day ko
+            apni poori story mat samajhna. 🌸
+
+            <br><br>
+
+            Better days bhi aayenge. 🤍
+
+        </p>
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= HAPPY ================= -->
+
+    <div class="section" id="happy">
+
+        <h2 class="section-title">
+            When You're Happy 🌸
+        </h2>
+
+        <p class="section-text">
+
+            Jab aap genuinely happy hoti hain na...
+
+            <br><br>
+
+            bas aise hi smile karti rehna. 🥹
+
+            <br><br>
+
+            Aapki happiness ko kisi
+            explanation ki zaroorat nahi.
+
+            <br><br>
+
+            Enjoy the moment.
+            Laugh a little louder.
+            Smile a little longer.
+
+            <br><br>
+
+            You deserve beautiful moments. 💗
+
+        </p>
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= EMOTIONAL ================= -->
+
+    <div class="section" id="emotional">
+
+        <h2 class="section-title">
+            When You're Emotional 🫂
+        </h2>
+
+        <p class="section-text">
+
+            Kuch feelings ko explain karna
+            zaroori nahi hota.
+
+            <br><br>
+
+            Kabhi bas thoda rukna,
+            breathe karna,
+            aur khud ko time dena enough hota hai.
+
+            <br><br>
+
+            Jo feel kar rahi ho,
+            usse feel karne do.
+
+            <br><br>
+
+            You don't have to have
+            everything figured out today. 🤍
+
+        </p>
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= LOVE LETTER ================= -->
+
+    <div class="section" id="letter">
+
+        <h2 class="section-title">
+            A Special Letter For You 💌
+        </h2>
+
+        <p class="section-text">
+            There's something waiting inside...
+        </p>
+
+
+        <div class="envelope" onclick="openLetter()">
+
+            <span>
+                Tap to open 💗
+            </span>
+
+        </div>
+
+
+        <div class="letter" id="loveLetter">
+
+            <h3 style="text-align:center;margin-bottom:20px;">
+                Dear Babyy Gurll,
+            </h3>
+
+            <p>
+
+                I don't really know how to put everything
+                I feel into a few words.
+
+                <br><br>
+
+                But today, on your birthday,
+                I just want you to know that
+                you are genuinely special to me.
+
+                <br><br>
+
+                There are moments I remember,
+                little conversations,
+                random smiles,
+                and tiny things that somehow
+                became important to me.
+
+                <br><br>
+
+                I hope life gives you the kind of happiness
+                that stays.
+
+                <br><br>
+
+                Keep smiling.
+                Keep being yourself.
+                And never forget how precious
+                your existence is.
+
+                <br><br>
+
+                Happy Birthday, Babyy Gurll. 🌸
+
+                <br><br>
+
+                With lots of love,<br>
+                <b>— Yours 💗</b>
+
+            </p>
+
+        </div>
+
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= MEMORIES ================= -->
+
+    <div class="section" id="memories">
+
+        <h2 class="section-title">
+            Our Memories 📸
+        </h2>
+
+        <div class="memory-placeholder">
+
+            <p>
+                Our little memories will live here. 🌸
+            </p>
+
+            <br>
+
+            <p>
+                Photos, dates, little stories
+                and moments we'll never forget.
+            </p>
+
+        </div>
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= REASONS ================= -->
+
+    <div class="section" id="reasons">
+
+        <h2 class="section-title">
+            Why You're Special 💖
+        </h2>
+
+
+        <div class="reason">
+            🌸 The way you can make an ordinary moment special.
+        </div>
+
+        <div class="reason">
+            🥹 The little things you do without realizing.
+        </div>
+
+        <div class="reason">
+            💗 The memories that somehow stay in my mind.
+        </div>
+
+        <div class="reason">
+            🌙 The person you are when nobody is watching.
+        </div>
+
+        <div class="reason">
+            ✨ And simply because you're you.
+        </div>
+
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= FINAL ================= -->
+
+    <div class="section" id="final">
+
+        <h2 class="section-title">
+            One Last Surprise 🌙
+        </h2>
+
+        <p class="section-text">
+
+            If you've reached here...
+
+            <br><br>
+
+            then you probably explored
+            this little world I made for you.
+
+            <br><br>
+
+            And honestly...
+
+            <br><br>
+
+            I hope every little page
+            made you smile at least once. 🌸
+
+            <br><br>
+
+            Because that's all I wanted.
+
+            <br><br>
+
+            <b>
+                Happy Birthday, Babyy Gurll. 💗
+            </b>
+
+            <br><br>
+
+            May your life always be
+            full of beautiful chapters.
+
+        </p>
+
+        <button class="back" onclick="goBack()">
+            ← Back
+        </button>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<script>
+
+
+function enterWebsite(){
+
+    document.getElementById("opening").style.display="none";
+
+    document.getElementById("main").style.display="block";
+
+    window.scrollTo(0,0);
+
+}
+
+
+function openSection(id){
+
+    document.querySelector(".menu").style.display="none";
+
+    document.querySelector(".header").style.display="none";
+
+    document.querySelectorAll(".section").forEach(function(section){
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById(id).classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+function goBack(){
+
+    document.querySelectorAll(".section").forEach(function(section){
+
+        section.classList.remove("active");
+
+    });
+
+    document.querySelector(".menu").style.display="grid";
+
+    document.querySelector(".header").style.display="block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+function openLetter(){
+
+    document.getElementById("loveLetter").classList.add("show");
+
+}
+
+
+</script>
+
+
+</body>
+</html>
