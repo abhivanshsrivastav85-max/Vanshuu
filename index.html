@@ -2,1240 +2,611 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>For My Babyy Gurll 💗</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For My Babyy Gurll ❤️</title>
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-    font-family: Georgia, "Times New Roman", serif;
-    color:#563d43;
-    min-height:100vh;
-
-    background:
-        linear-gradient(rgba(255,245,248,0.18),
-                        rgba(255,245,248,0.18)),
-        url("background.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
-    overflow-x:hidden;
+  font-family:Georgia,"Times New Roman",serif;color:#593f45;
+  min-height:100vh;overflow-x:hidden;
+  background:linear-gradient(rgba(255,244,247,.12),rgba(255,244,247,.12)),url("background.jpg") center/cover fixed;
 }
-
-/* Soft vintage overlay */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:rgba(255,245,248,0.12);
-    pointer-events:none;
-    z-index:-1;
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:rgba(255,248,247,.08);z-index:-1}
+button{font:inherit}
+.page{min-height:100vh;padding:24px 16px 70px}
+.paper{
+  width:min(920px,100%);margin:auto;
+  background:rgba(255,248,244,.78);
+  border:1px solid rgba(95,62,69,.22);
+  box-shadow:0 12px 45px rgba(70,40,48,.16);
+  backdrop-filter:blur(3px);
 }
-
-
-/* ---------------- OPENING SCREEN ---------------- */
-
-.opening{
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:30px;
+.opening{min-height:100vh;display:grid;place-items:center;padding:22px}
+.open-card{width:min(560px,100%);padding:52px 26px;text-align:center}
+.kicker{letter-spacing:3px;text-transform:uppercase;font-size:12px;opacity:.72;margin-bottom:18px}
+h1,h2,h3{font-weight:normal}
+.open-card h1{font-size:clamp(34px,9vw,54px);color:#633e48;margin-bottom:18px}
+.open-card p{font-size:17px;line-height:1.85}
+.btn{
+  border:1px solid #7b5962;background:rgba(255,255,255,.45);color:#583e45;
+  padding:12px 24px;cursor:pointer;transition:.25s;margin-top:25px;
 }
-
-.opening-card{
-
-    width:100%;
-    max-width:500px;
-
-    padding:45px 25px;
-
-    background:rgba(255,248,246,0.72);
-
-    border:1px solid rgba(120,75,80,0.25);
-
-    box-shadow:
-        0 15px 50px rgba(80,45,50,0.18),
-        inset 0 0 30px rgba(255,255,255,0.5);
-
-    backdrop-filter:blur(3px);
-
-    animation:fadeIn 2s ease;
-}
-
-.small-text{
-    font-size:14px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:22px;
-    opacity:.75;
-}
-
-.opening h1{
-
-    font-size:42px;
-
-    font-weight:normal;
-
-    color:#633e48;
-
-    margin-bottom:18px;
-}
-
-.opening p{
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    margin-bottom:32px;
-}
-
-.enter-btn{
-
-    padding:14px 30px;
-
-    border:1px solid #79535b;
-
-    background:rgba(255,255,255,.45);
-
-    color:#593c43;
-
-    font-family:Georgia,serif;
-
-    font-size:16px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.enter-btn:hover{
-
-    background:#f4dfe5;
-
-    transform:translateY(-2px);
-
-}
-
-
-/* ---------------- MAIN WEBSITE ---------------- */
-
-#main{
-
-    display:none;
-
-    min-height:100vh;
-
-    padding:35px 18px 70px;
-
-    animation:fadeIn 1.5s ease;
-}
-
-.container{
-
-    width:100%;
-
-    max-width:900px;
-
-    margin:auto;
-}
-
-
-/* HEADER */
-
-.header{
-
-    text-align:center;
-
-    padding:45px 20px 35px;
-
-}
-
-.header .flower{
-
-    font-size:38px;
-
-    margin-bottom:12px;
-}
-
-.header h2{
-
-    font-size:36px;
-
-    font-weight:normal;
-
-    color:#603d45;
-
-}
-
-.header p{
-
-    margin-top:12px;
-
-    font-size:16px;
-
-    line-height:1.7;
-}
-
-
-/* MENU */
-
-.menu{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-
-    margin-top:15px;
-}
-
+.btn:hover{transform:translateY(-2px);background:#f3dfe5}
+#site{display:none}
+.header{text-align:center;padding:42px 20px 24px}
+.header .flower{font-size:38px;margin-bottom:10px}
+.header h2{font-size:36px}
+.header p{margin-top:10px;line-height:1.7}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:20px}
 .card{
-
-    min-height:150px;
-
-    padding:25px 15px;
-
-    background:rgba(255,248,246,.76);
-
-    border:1px solid rgba(100,65,70,.25);
-
-    box-shadow:0 8px 25px rgba(90,50,55,.13);
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.35s;
+  min-height:145px;padding:22px 12px;text-align:center;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(255,250,247,.76);border:1px solid rgba(95,62,69,.22);
+  box-shadow:0 7px 22px rgba(80,45,52,.11);transition:.3s;
 }
-
-.card:hover{
-
-    transform:translateY(-5px);
-
-    background:rgba(255,245,247,.9);
-
-    box-shadow:0 15px 35px rgba(90,50,55,.18);
-}
-
-.card-icon{
-
-    font-size:35px;
-
-    margin-bottom:12px;
-}
-
-.card h3{
-
-    font-size:18px;
-
-    font-weight:normal;
-
-    margin-bottom:7px;
-}
-
-.card p{
-
-    font-size:13px;
-
-    opacity:.75;
-}
-
-
-/* ---------------- SECTIONS ---------------- */
-
-.section{
-
-    display:none;
-
-    margin-top:35px;
-
-    padding:35px 25px;
-
-    background:rgba(255,249,247,.82);
-
-    border:1px solid rgba(100,65,70,.25);
-
-    box-shadow:0 10px 35px rgba(90,50,55,.15);
-
-    animation:fadeIn .7s ease;
-}
-
-.section.active{
-
-    display:block;
-}
-
-.section-title{
-
-    text-align:center;
-
-    font-size:29px;
-
-    font-weight:normal;
-
-    margin-bottom:22px;
-
-    color:#603d45;
-}
-
-.section-text{
-
-    font-size:17px;
-
-    line-height:2;
-
-    text-align:center;
-}
-
-
-/* BACK BUTTON */
-
-.back{
-
-    display:block;
-
-    margin:28px auto 0;
-
-    padding:10px 23px;
-
-    border:1px solid #80616a;
-
-    background:transparent;
-
-    color:#5d4148;
-
-    font-family:Georgia,serif;
-
-    cursor:pointer;
-}
-
-
-/* ---------------- LOVE LETTER ---------------- */
-
-.envelope{
-
-    width:180px;
-
-    height:120px;
-
-    margin:30px auto;
-
-    background:#e8cdd3;
-
-    border:1px solid #89636c;
-
-    position:relative;
-
-    cursor:pointer;
-
-    box-shadow:0 10px 25px rgba(70,40,45,.2);
-}
-
-.envelope::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:0;
-    height:0;
-
-    border-left:89px solid transparent;
-    border-right:89px solid transparent;
-    border-top:65px solid #d8b3bd;
-
-}
-
-.envelope span{
-
-    position:absolute;
-
-    bottom:15px;
-
-    left:0;
-
-    right:0;
-
-    text-align:center;
-
-    font-size:14px;
-}
-
+.card:hover{transform:translateY(-4px);background:rgba(255,247,249,.92)}
+.icon{font-size:34px;margin-bottom:10px}.card h3{font-size:18px}.card p{font-size:13px;opacity:.72;margin-top:6px}
+.section{display:none;padding:28px 22px 36px;animation:fade .55s ease}
+.section.active{display:block}
+.title{text-align:center;font-size:30px;color:#633e48;margin-bottom:24px}
+.text{font-size:16px;line-height:2;text-align:left;white-space:pre-line}
+.center{text-align:center}
+.back{display:block;margin:28px auto 0;padding:10px 22px;border:1px solid #80616a;background:transparent;color:#5d4148;cursor:pointer}
 .letter{
-
-    display:none;
-
-    margin-top:25px;
-
-    padding:28px 20px;
-
-    background:#fff8e9;
-
-    border:1px solid #b69a83;
-
-    box-shadow:inset 0 0 35px rgba(150,110,80,.12);
-
-    line-height:2;
-
-    font-size:16px;
-
-    text-align:left;
-
+  background:#fff8e9;border:1px solid #b69a83;box-shadow:inset 0 0 35px rgba(150,110,80,.12);
+  padding:28px 21px;line-height:2;font-size:16px;white-space:pre-line;
 }
-
-.letter.show{
-
-    display:block;
-
-    animation:fadeIn 1s ease;
+.envelope{width:190px;height:125px;margin:28px auto;position:relative;background:#e7cbd2;border:1px solid #89636c;cursor:pointer;box-shadow:0 10px 25px rgba(70,40,45,.18)}
+.envelope:before{content:"";position:absolute;inset:0 auto auto 0;border-left:94px solid transparent;border-right:94px solid transparent;border-top:66px solid #d5b0ba}
+.envelope span{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:14px}
+.hidden-letter{display:none}.hidden-letter.show{display:block;animation:fade .8s}
+.reason,.love-line{
+  padding:16px;margin:11px 0;background:rgba(255,238,242,.68);
+  border-left:3px solid #b77b89;line-height:1.7;
 }
-
-
-/* ---------------- REASONS ---------------- */
-
-.reason{
-
-    padding:18px;
-
-    margin:12px 0;
-
-    background:rgba(255,238,242,.7);
-
-    border-left:3px solid #b77b89;
-
-    line-height:1.7;
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border:5px solid #fff8f1;box-shadow:0 5px 16px rgba(70,40,45,.15)}
+.photo-note{text-align:center;margin:18px 0;line-height:1.8}
+.cake{text-align:center;font-size:82px;animation:bounce 1.8s infinite;margin:18px 0}
+.confetti{text-align:center;font-size:30px;letter-spacing:10px;margin-bottom:20px}
+.turn-page{
+  margin:28px auto 10px;display:block;padding:15px 25px;
+  background:#f1d9df;border:1px solid #80616a;color:#5b3d45;cursor:pointer;
 }
-
-
-/* ---------------- MEMORIES ---------------- */
-
-.memory-placeholder{
-
-    padding:35px 20px;
-
-    border:1px dashed #96737b;
-
-    text-align:center;
-
-    margin-top:20px;
-
-    background:rgba(255,255,255,.3);
-
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.video-card{background:rgba(255,250,247,.75);border:1px solid rgba(95,62,69,.22);padding:12px;cursor:pointer}
+.video-card video{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;background:#ead6dc}
+.video-card p{text-align:center;margin-top:9px}
+.video-viewer{display:none;position:fixed;inset:0;background:rgba(25,12,18,.82);z-index:20;align-items:center;justify-content:center;padding:18px}
+.video-viewer.show{display:flex}
+.video-box{width:min(850px,100%);background:#fff8f3;padding:12px;position:relative}
+.video-box video{width:100%;max-height:78vh;background:#111}
+.close{position:absolute;right:8px;top:8px;border:0;background:#fff;color:#563d43;width:34px;height:34px;cursor:pointer;z-index:2}
+.float{position:fixed;bottom:-30px;opacity:.38;animation:float 8s linear infinite;pointer-events:none}
+.f1{left:8%}.f2{left:28%;animation-delay:2s}.f3{left:55%;animation-delay:4s}.f4{left:78%;animation-delay:1s}.f5{left:90%;animation-delay:5s}
+.music{
+ position:fixed;right:12px;bottom:12px;z-index:15;border:1px solid #80616a;
+ background:rgba(255,248,244,.88);color:#5d4148;padding:9px 12px;cursor:pointer;
 }
-
-.memory-placeholder p{
-
-    line-height:1.8;
-
-}
-
-
-/* ---------------- BIRTHDAY ---------------- */
-
-.cake{
-
-    font-size:80px;
-
-    text-align:center;
-
-    margin:25px 0;
-
-    animation:bounce 2s infinite;
-}
-
-.confetti{
-
-    font-size:35px;
-
-    text-align:center;
-
-    letter-spacing:12px;
-
-}
-
-
-/* ---------------- FLOATING HEARTS ---------------- */
-
-.heart{
-
-    position:fixed;
-
-    bottom:-30px;
-
-    font-size:20px;
-
-    opacity:.45;
-
-    animation:floatUp 8s linear infinite;
-
-    pointer-events:none;
-
-}
-
-.h1{left:8%;animation-delay:0s;}
-.h2{left:28%;animation-delay:2s;}
-.h3{left:55%;animation-delay:4s;}
-.h4{left:78%;animation-delay:1s;}
-.h5{left:90%;animation-delay:5s;}
-
-
-/* ---------------- ANIMATIONS ---------------- */
-
-@keyframes fadeIn{
-
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes floatUp{
-
-    0%{
-        transform:translateY(0) rotate(0);
-        opacity:0;
-    }
-
-    15%{
-        opacity:.5;
-    }
-
-    100%{
-        transform:translateY(-110vh) rotate(360deg);
-        opacity:0;
-    }
-}
-
-@keyframes bounce{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-}
-
-
-/* ---------------- MOBILE ---------------- */
-
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes float{from{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.45}to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes bounce{50%{transform:translateY(-9px)}}
 @media(max-width:600px){
-
-    .opening h1{
-        font-size:34px;
-    }
-
-    .opening p{
-        font-size:16px;
-    }
-
-    .menu{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-    }
-
-    .card{
-        min-height:135px;
-        padding:18px 10px;
-    }
-
-    .card-icon{
-        font-size:30px;
-    }
-
-    .card h3{
-        font-size:16px;
-    }
-
-    .section{
-        padding:28px 18px;
-    }
-
-    .section-title{
-        font-size:25px;
-    }
-
+ .menu,.video-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .card{min-height:132px}.section{padding:25px 17px 34px}.title{font-size:26px}
+ .text{font-size:15px}.gallery{gap:9px}
 }
-
 </style>
 </head>
-
-
 <body>
+    
+<div class="float f1">♡</div><div class="float f2">♡</div><div class="float f3">♥</div><div class="float f4">♡</div><div class="float f5">♥</div>
 
+<audio id="music" loop preload="auto"></audio>
 
-<!-- FLOATING HEARTS -->
-
-<div class="heart h1">♡</div>
-<div class="heart h2">♡</div>
-<div class="heart h3">♥</div>
-<div class="heart h4">♡</div>
-<div class="heart h5">♥</div>
-
-
-<!-- ================= OPENING ================= -->
-
-<section class="opening" id="opening">
-
-    <div class="opening-card">
-
-        <div class="small-text">
-            A little something for you
-        </div>
-
-        <h1>
-            Hey Babyy Gurll... 💗
-        </h1>
-
-        <p>
-            I made a little world<br>
-            just for you.
-            <br><br>
-            Maybe it's not perfect,<br>
-            but every little part of it<br>
-            is made with love.
-        </p>
-
-        <button class="enter-btn" onclick="enterWebsite()">
-            Open Your Surprise ✨
-        </button>
-
-    </div>
-
+<section id="opening" class="opening">
+  <div class="paper open-card">
+    <div class="kicker">A little world made for you</div>
+    <h1>Hey Babyy Gurll... 💗</h1>
+    <p>I made a little world<br>just for you.<br><br>Every little page has a piece of my heart. 🌷</p>
+    <button class="btn" onclick="enterSite()">Open Your Surprise ✨</button>
+  </div>
 </section>
 
+<main id="site" class="page">
+<div class="paper">
+  <header class="header">
+    <div class="flower">🌸</div>
+    <h2>For My Babyy Gurll</h2>
+    <p>A little corner of my heart, made just for you. ❤️</p>
+  </header>
 
+  <div id="menu" class="menu">
+    <div class="card" onclick="openSection('birthday','hasi.mp3')"><div class="icon">🎂</div><h3>Birthday Surprise</h3><p>Your special day</p></div>
+    <div class="card" onclick="openSection('sad','nadaniyaan.mp3')"><div class="icon">🥹</div><h3>When You're Sad</h3><p>Open when you need comfort</p></div>
+    <div class="card" onclick="openSection('happy','aashiqtera.mp3')"><div class="icon">🌸</div><h3>When You're Happy</h3><p>For your beautiful smiles</p></div>
+    <div class="card" onclick="openSection('emotional','sajdaa.mp3')"><div class="icon">🫂</div><h3>When You're Emotional</h3><p>A little reminder</p></div>
+    <div class="card" onclick="openSection('letter','arz.mp3')"><div class="icon">💌</div><h3>Special Love Letter</h3><p>Open my heart</p></div>
+    <div class="card" onclick="openSection('iloveyou','achhi.mp3')"><div class="icon">❤️</div><h3>I Love Youu</h3><p>100 little ways to say it</p></div>
+    <div class="card" onclick="openSection('special','jeene.mp3')"><div class="icon">💖</div><h3>Why You Are Special</h3><p>Because you're you</p></div>
+    <div class="card" onclick="openSection('reasons','rishte.mp3')"><div class="icon">🌷</div><h3>Reasons Why I Love You</h3><p>So many little reasons</p></div>
+    <div class="card" onclick="openSection('forget','tumtak.mp3')"><div class="icon">🌙</div><h3>Things I Hope You Never Forget</h3><p>A little reminder</p></div>
+    <div class="card" onclick="openSection('last','dariya.mp3')"><div class="icon">🎁</div><h3>One Last Surprise</h3><p>Don't leave yet...</p></div>
+  </div>
 
-<!-- ================= MAIN ================= -->
+  <section class="section" id="birthday">
+    <h2 class="title">Happy Birthday, Meri Babyy Gurll ❤️🎂</h2>
+    <div class="cake">🎂</div><div class="confetti">✨ 🌸 ✨</div>
+    <div class="letter">Pata hai, aaj ka din mere liye itna special kyun hai?
 
-<section id="main">
+Kyuki aaj us insaan ka birthday hai, jiska naam sunte hi mere face par automatically ek smile aa jaati hai…
+meri Babyy Gurll. 🥹❤️
 
-<div class="container">
+Aap shayad kabhi poori tarah samajh bhi nahi paogi ki aap meri life mein kitni special ho. Kuch log bas life ka ek hissa hote hain, lekin kuch log dheere-dheere itne important ban jaate hain ki unka hona hi ek beautiful feeling lagne lagta hai…
 
+Aap mere liye wahi ho. 🌷
 
-    <div class="header">
+Aapki ek chhoti si baat mera mood change kar sakti hai, aapki ek smile mera poora din better kar sakti hai, aur aapka khush hona pata nahi kyun mujhe bhi andar se khush kar deta hai. 🥹🫶🏻
 
-        <div class="flower">
-            🌸
-        </div>
+Kabhi-kabhi main sochta hoon ki aakhir aap meri life mein itni important kaise ban gayi…
 
-        <h2>
-            For My Babyy Gurll
-        </h2>
+Aur phir answer milta hai—
 
-        <p>
-            Welcome to your little corner of my heart. 💗
-        </p>
+Shayad kyunki aap sirf meri favourite person nahi ho,
+aap meri favourite feeling ban gayi ho. ❤️
 
+Aaj aapke birthday par meri sabse pehli wish ye hai ki aap hamesha khush raho.
+Aapke chehre ki ye beautiful smile kabhi kam na ho.
+Aapke saare dreams poore hon.
+Aap jis cheez ko dil se chaaho, woh aapko mile.
+Aur life aapko utni hi happiness de jitni aap mere jaise kisi ke life mein lekar aayi ho. 🌸✨
+
+Main chahta hoon ki aap apni life mein bahut aage jao, apne dreams achieve karo, apne aap par proud feel karo aur har woh happiness experience karo jo aap deserve karti ho.
+
+Aur jab bhi life thodi difficult ho na, toh bas ek baat yaad rakhna—
+
+Aapko har waqt strong rehne ki zarurat nahi hai.
+Aapko perfect hone ki zarurat nahi hai.
+Aapko bas apni beautiful si self rehna hai. 🫂❤️
+
+Thank you, Babyy Gurll…
+
+Meri life mein aane ke liye.
+Meri random baatein sunne ke liye.
+Mere saath apni little-little moments share karne ke liye.
+Mujhe smile karwane ke liye.
+Aur un countless memories ka part banne ke liye jo mere liye hamesha special rahengi. ❤️
+
+Kabhi-kabhi aapko shayad lage ki aap ordinary ho…
+
+Lekin meri nazar se dekho toh—
+
+Aap bahut, bahut special ho.
+Itni special ki aapke liye likhne baithun toh words khatam ho sakte hain, feelings nahi. 🥹❤️
+
+Aaj ka din aapke naam. 🎂🌷
+Aaj ki saari smiles aapke naam.
+Aur meri taraf se nikli har beautiful wish aapke naam. 🫶🏻
+
+So, Happy Birthday meri Babyy Gurll, meri special person, meri favourite human. ❤️
+
+Hamesha khush rehna.
+Hamesha smile karna.
+Apne dreams ke peeche jaana.
+Aur please… apni woh cute si smile kabhi mat khona. 🥹🌸
+
+Janamdin mubarak ho, meri jaan. 🎂❤️
+
+I hope jab bhi aap ye letter padho, aapke face par wahi smile aaye jo aapke khayal se mere face par aa jaati hai.
+
+And if someday you ask me,
+“Why am I so special to you?”
+
+I think my answer will always be—
+
+“Because you're you…
+and there will always be only one you.” ❤️
+
+I love you, my Babyy Gurll.
+More than these words can ever explain. 🫶🏻❤️
+
+— Yours, Vanshuu 🌷</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="sad">
+    <h2 class="title">Babyy Gurll 🥺❤️</h2>
+    <div class="letter">Agar kabhi aapka mood bahut low ho, dil heavy sa lage, ya bina kisi reason ke bas rona aaye… toh ek baar ye message padh lena. 🫂
+
+Aapko har waqt strong rehne ki zarurat nahi hai, meri jaan. Kabhi-kabhi thak jaana, chup ho jaana, ya bas kisi ke paas rehne ka mann karna bhi bilkul okay hai. 🌷
+
+Bas itna yaad rakhna — aap bahut precious ho. Aapki smile, aapki little-little बातें, aapka hona… sab matter karta hai. ❤️
+
+Aur haan, jab duniya thodi zyada heavy lage na, toh sab kuch akeli handle karne ki koshish mat karna. Mujhe yaad kar lena. Kuch bolna zaroori nahi hai… bas “low hoon” likh dena. Baaki main samajhne ki koshish karunga. 🫶🏻
+
+Aaj agar smile nahi aa rahi toh koi baat nahi… force mat karna. Bas thoda rest karo, paani piyo, deep breath lo aur khud se ek baar kehna—
+
+“Ye feeling hamesha nahi rahegi. Main theek ho jaungi.” 🌸
+
+Aur meri taraf se ek chhota sa reminder:
+Aapki value kisi ek bad day, kisi ek problem, ya kisi ek person ke behaviour se kabhi kam nahi hoti. ❤️
+
+So please, apna khayal rakha karo meri Babyy Gurll.
+Aapko khush dekhna bahut achha lagta hai. 🥹💗
+
+Ab ek tiny si smile please… sirf mere liye. 🫶🏻🌷</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+  
+  <section class="section" id="happy">
+    <h2 class="title">Babyy Gurll 🥹❤️</h2>
+    <div class="letter">Jab aap khush hoti ho na, pata nahi kyun mujhe bhi andar se ek alag hi sukoon milta hai. 🫶🏻
+
+Aapki woh genuine si smile, woh excited wali baatein, woh chhoti-chhoti cheezon par khush ho jaana… bas aise hi rehna aap. 🌷✨
+
+Aapko hamesha perfect days nahi milenge, isliye jab bhi koi beautiful moment mile na, usse poori tarah feel karna. Hassna, pagal hona, enjoy karna… bilkul bina kisi guilt ke. 🥹💗
+
+Aur jab aap khush ho, toh please apni happiness chhupana mat… kyunki aapki khushi dekhna mere liye bhi ek chhoti si khushi hai. ❤️
+
+Bas ek promise—
+jitna ho sake, apni ye beautiful smile sambhal ke rakhna.
+Kyuki meri Babyy Gurll jab khush hoti hai na… toh duniya thodi aur pretty lagti hai. 🫠🌸
+
+So today, no overthinking.
+No unnecessary sadness.
+Bas smile, enjoy aur khush raho. 🫶🏻
+
+Aap khush ho = mera dil bhi thoda extra happy. 🥹❤️</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="emotional">
+    <h2 class="title">Babyy Gurll 🥺❤️</h2>
+    <div class="letter">Agar aaj dil thoda zyada emotional hai na, toh kuch bhi explain karne ki zarurat nahi hai. Kabhi-kabhi feelings ko words ki zarurat nahi hoti… bas kisi ka samajhna hi kaafi hota hai. 🫂
+
+Aap jo feel kar rahi ho, woh feel karna okay hai. Khud ko strong dikhane ke liye apni feelings ko dabaana zaroori nahi hai. Agar aansu aa rahe hain toh aane do… thoda halka feel hone do. 🌷
+
+Aur ek baat yaad rakhna—
+aapki feelings “too much” nahi hain, aur aap kisi ke liye burden nahi ho. ❤️
+
+Aaj bas thoda slowly breathe karo, apna khayal rakho aur khud se thodi softness se baat karo. Aap bhi deserve karti ho wahi pyaar aur care jo aap dusron ko deti ho. 🥹🫶🏻
+
+Aur jab dil kare na, bas mujhe ek message kar dena—
+“Mujhe bas thodi der kisi ki zarurat hai.”
+
+Baaki words ki zarurat nahi.
+Bas aap apna dil halka karna… main sununga. 🫂❤️
+
+Meri Babyy Gurll, aapko har waqt strong nahi banna hai… kabhi-kabhi bas meri chhoti si emotional si girl banke rehna bhi allowed hai. 🥹🌸
+
+Take your time, okay?
+You’re allowed to feel. You’re allowed to rest. And you’re still just as precious. ❤️</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="letter">
+    <h2 class="title">A Special Letter For You 💌</h2>
+    <p class="center">There's something waiting inside...</p>
+    <div class="envelope" onclick="openLetter()"><span>Tap to open 💗</span></div>
+    <div id="loveLetter" class="letter hidden-letter">To My Babyy Gurll, ❤️
+
+Dear Babyy Gurll,
+
+Pata nahi main aapko exactly kaise samjhaun ki aap mere liye kya ho. Kuch feelings aisi hoti hain na, jinhe jitna words mein likhne ki koshish karo, utna hi lagta hai ki abhi bhi kuch kehna baaki hai.
+
+Aap meri life mein sirf ek person banke nahi aayi… aap meri memories ka ek beautiful part ban gayi ho. Aapki chhoti-chhoti baatein, aapki smile, aapka mood, aapka khush hona, kabhi emotional ho jaana—pata nahi kab ye sab mere liye itna important ho gaya. ❤️
+
+Mujhe aapka sirf happy version nahi pasand. Jab aap excited hoti ho tab bhi, jab aap emotional hoti ho tab bhi, jab aap confused hoti ho tab bhi… aap, bas aap, mere liye special ho.
+
+Main chahta hoon ki aap kabhi ye na socho ki aapko har waqt perfect hona hai. Aapko kisi ke saamne apni feelings hide karne ki zarurat nahi. Aap jaisi ho, waise hi enough ho. 🌷
+
+Aur agar kabhi life mein koi aisa din aaye jab sab kuch thoda difficult lage, toh please ek baat yaad rakhna—ek bad day aapki poori story define nahi karta. Kal phir ek naya din hoga, phir koi chhoti si smile hogi, phir koi reason milega khush hone ka.
+
+Mujhe aapki khushi bahut beautiful lagti hai. Isliye jab aap genuinely khush hoti ho na, toh bas khush raha karo. Us moment ko overthink mat karna. Hasna, enjoy karna, pagalpan karna… aur apni woh beautiful smile bilkul mat chhupana. 🥹❤️
+
+Aur meri ek chhoti si wish hai—
+
+Aap life mein bahut saari woh cheezein pao jo aapke dil ko sach mein khush karein.
+Aapko apne dreams milen.
+Aapko sukoon mile.
+Aapko apne aap par proud feel ho.
+Aur aap kabhi apni worth bhoolo nahi.
+
+Aap meri life ka ek beautiful chapter ho, Babyy Gurll.
+Aur kuch chapters ko khatam karne ki jaldi nahi hoti… unhe bas dil se jeena hota hai. 📖❤️
+
+Thank you… meri life mein aane ke liye.
+Thank you… mujhe itni saari memories dene ke liye.
+Aur sabse zyada, thank you for being you.
+
+Agar kabhi aapko doubt ho ki aap kitni special ho, toh ye letter dobara padh lena.
+
+Shayad mere words perfect na hon,
+par in words ke peeche jo feeling hai…
+woh bilkul real hai. ❤️
+
+Always take care of that beautiful heart of yours, Babyy Gurll. 🫂🌷
+
+With lots of love,
+Aapka Vanshuu ❤️</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="iloveyou">
+    <h2 class="title">I Love Youu ❤️</h2>
+    <div id="loveList"></div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="special">
+    <h2 class="title">Why You Are Special ❤️</h2>
+    <div class="letter">You are special to me not because you are perfect, but because you are you.
+
+Aapki smile mein kuch aisa hai jo mera mood bina kuch kahe better kar deta hai. 🥹
+Aapki chhoti-chhoti baatein bhi mere liye yaad reh jaati hain, kyunki woh aapki hoti hain.
+
+Aap jis tarah apni feelings ko feel karti ho, jis tarah chhoti cheezon mein happiness dhoond leti ho, jis tarah kabhi bahut emotional aur kabhi bilkul pagal-si ho jaati ho—ye sab milkar aapko aap banata hai. 🌷
+
+Mujhe aapka sirf woh side special nahi lagta jo duniya ko dikhai deta hai.
+Aapke woh little moments bhi special hain jo shayad aap khud notice bhi nahi karti.
+
+Aapki presence hi kaafi hai.
+Kabhi baat ho, kabhi silence ho, kabhi hasi ho, kabhi emotional moments—aapke saath har feeling thodi zyada meaningful lagti hai.
+
+Aur shayad sabse special baat ye hai ki…
+
+Aap meri life mein sirf ek person nahi ho.
+Aap ek feeling ho.
+Ek beautiful memory ho.
+Ek smile ka reason ho.
+Aur meri story ka woh chapter ho jise main hamesha special samjhunga. ❤️
+
+So, if you ever ask me,
+“Why am I special?”
+
+My answer will simply be—
+
+“Because there is only one YOU.
+And there will always be something about you that no one else can replace.” 🫶🏻❤️</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="reasons">
+    <h2 class="title">Reasons Why I Love My Babyy Gurll 🥹❤️</h2>
+    <div class="letter">Babyy Gurll,
+agar kabhi aap mujhse poochho ki “Aap mujhse love kyun karte ho?”
+toh shayad mere paas ek single answer kabhi nahi hoga… because there are just too many little reasons. 🫶🏻
+
+I love you because… ❤️</div>
+    <div class="reason">🌷 Aapki smile — kyunki jab aap genuinely khush hoti ho na, toh mera mood bhi automatically achha ho jaata hai.</div>
+    <div class="reason">🥹 Aapki cute si baatein — even your random, silly little conversations somehow become my favourite.</div>
+    <div class="reason">🫶🏻 Aapka caring nature — jis tarah aap apne loved ones ki care karti ho, woh mujhe bahut beautiful lagta hai.</div>
+    <div class="reason">🌸 Aapki little habits — woh chhoti-chhoti cheezein jo shayad aapko normal lagti hain, mere liye wahi toh aapko “aap” banati hain.</div>
+    <div class="reason">💗 Aapka emotional side — because you don't always have to be strong. Aap jab apni feelings share karti ho, tab bhi aap equally precious ho.</div>
+    <div class="reason">😂 Aapka pagalpan — honestly, aapki random wali energy kabhi-kabhi itni cute hoti hai ki bas smile aa jaati hai.</div>
+    <div class="reason">🥺 Aapka hona — sometimes there doesn't even need to be a conversation. Just knowing you're there feels special.</div>
+    <div class="reason">✨ Aap mujhe comfortable feel karwati ho — jaise mujhe har baat perfectly explain karne ki zarurat nahi hoti.</div>
+    <div class="reason">🌙 Aapki presence — aapke saath ordinary moments bhi thode more meaningful lagte hain.</div>
+    <div class="reason">❤️ Aur sabse bada reason… YOU.</div>
+    <div class="letter">Not because you're perfect.
+Not because you never make mistakes.
+Not because everything is always easy.
+
+I love you because you're YOU.
+
+Aapki smile, aapki बातें, aapka cute sa gussa, aapka emotional hona, aapka khush hona, aapka random pagalpan—sab milkar meri Babyy Gurll ko meri Babyy Gurll banate hain. 🥹🫶🏻
+
+Aur agar kabhi aapko lage ki
+“Aakhir mujh mein aisa kya hai?”
+
+Toh answer simple hai—
+
+There is only one you.
+And that's more than enough of a reason for me to love you. ❤️🌷
+
+So please, meri Babyy Gurll,
+kabhi apni worth doubt mat karna.
+
+Aap special ho.
+Aap precious ho.
+Aur aap jaisi ho, waise hi beautiful ho. 🫂❤️</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="forget">
+    <h2 class="title">Things I Hope You Never Forget 🌷</h2>
+    <div class="letter">Babyy Gurll 🥹❤️
+
+Kabhi life bahut achhi chal rahi ho aur kabhi sab kuch confusing lage… bas in chhoti-chhoti baaton ko yaad rakhna. 🌷
+
+✨ You are allowed to grow at your own pace.
+
+🌸 Aapko har kisi ko please karna zaroori nahi hai.
+
+🫂 Aapko har waqt strong rehna zaroori nahi hai.
+
+💗 Ek difficult day aapki poori story define nahi karta.
+
+🌙 Apne dreams ko kabhi chhota mat samajhna.
+
+🥹 Apni happiness ko guilt ke saath mat jodna.
+
+🌷 Jo cheezein aapko genuinely khush karti hain, unke liye time nikalna.
+
+Aur sabse important—
+
+Kabhi ye mat bhoolna ki aapki apni ek beautiful identity hai.
+Aapki value kisi comparison, kisi mistake ya kisi difficult moment se kam nahi hoti. ❤️
+
+So whenever you need this reminder,
+come back here. 🌸
+
+You are enough.
+You are precious.
+And you deserve beautiful things. 🫶🏻</div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
+
+  <section class="section" id="last">
+    <h2 class="title">ONE LAST SURPRISE… 🎁</h2>
+    <div class="letter">Babyy Gurll,
+agar aap yahan tak aa gayi ho, toh congratulations…
+aapne meri poori little si duniya padh li. 🥹❤️
+
+Lekin wait…
+
+Ek last surprise abhi bhi baaki hai. 👀🌷
+
+Aap shayad soch rahi hogi ki gift kya hai…
+
+Koi expensive cheez nahi.
+Koi fancy present nahi.
+
+Actually…
+
+Ye poori notebook hi meri taraf se ek gift nahi thi.
+Ye meri feelings ka ek chhota sa collection tha. ❤️
+
+Har page mein thoda sa mera time tha,
+thoda sa effort,
+bahut saari memories,
+aur sabse zyada…
+
+Aap. 🥹
+
+Aur ab last page par main bas ek cheez chahta hoon—
+
+Jab bhi aap ye notebook future mein dobara kholo,
+please pehle page se lekar yahan tak sab kuch yaad karna…
+
+Aur phir smile karna. 🫶🏻
+
+Because somewhere in this little book,
+there is a version of me who simply wanted to say—
+
+“Babyy Gurll, you are really, really special to me.” ❤️
+
+And now the REAL last surprise… 👀
+
+Turn the page. 🥹👉🏻❤️</div>
+    <button class="turn-page" onclick="showVideos()">Turn the page 🥹👉🏻❤️</button>
+    <div id="videos" style="display:none">
+      <div class="video-grid">
+        <div class="video-card" onclick="playVideo('1.mp4')"><video src="1.mp4" preload="metadata" muted playsinline></video><p>Our little surprise ❤️</p></div>
+        <div class="video-card" onclick="playVideo('2.mp4')"><video src="2.mp4" preload="metadata" muted playsinline></video><p>A little memory 🌷</p></div>
+        <div class="video-card" onclick="playVideo('3.mp4')"><video src="3.mp4" preload="metadata" muted playsinline></video><p>Just for you 🥹</p></div>
+        <div class="video-card" onclick="playVideo('4.mp4')"><video src="4.mp4" preload="metadata" muted playsinline></video><p>One more thing ❤️</p></div>
+      </div>
+      <div class="letter center" style="margin-top:22px">Agar aap smile kar rahi ho right now…
+
+SURPRISE SUCCESSFUL. 😭😂❤️
+
+— Yours,
+Vanshuu 🫶🏻</div>
     </div>
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
 
-
-    <!-- MENU -->
-
-    <div class="menu">
-
-
-        <div class="card" onclick="openSection('birthday')">
-
-            <div class="card-icon">🎂</div>
-
-            <h3>
-                Birthday Surprise
-            </h3>
-
-            <p>
-                Your special day
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('sad')">
-
-            <div class="card-icon">🥹</div>
-
-            <h3>
-                When You're Sad
-            </h3>
-
-            <p>
-                Open this when you need comfort
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('happy')">
-
-            <div class="card-icon">🌸</div>
-
-            <h3>
-                When You're Happy
-            </h3>
-
-            <p>
-                For your beautiful smiles
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('emotional')">
-
-            <div class="card-icon">🫂</div>
-
-            <h3>
-                When You're Emotional
-            </h3>
-
-            <p>
-                A little reminder
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('letter')">
-
-            <div class="card-icon">💌</div>
-
-            <h3>
-                Special Love Letter
-            </h3>
-
-            <p>
-                Open my heart
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('memories')">
-
-            <div class="card-icon">📸</div>
-
-            <h3>
-                Our Memories
-            </h3>
-
-            <p>
-                Little moments
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('reasons')">
-
-            <div class="card-icon">💖</div>
-
-            <h3>
-                Why You're Special
-            </h3>
-
-            <p>
-                Just a few reasons
-            </p>
-
-        </div>
-
-
-        <div class="card" onclick="openSection('final')">
-
-            <div class="card-icon">🌙</div>
-
-            <h3>
-                One Last Surprise
-            </h3>
-
-            <p>
-                Don't leave yet...
-            </p>
-
-        </div>
-
-
+  <section class="section" id="photos">
+    <h2 class="title">A Few Little Memories 📸</h2>
+    <p class="photo-note">Bas photos ko repository mein <b>A.jpg, B.jpg, C.jpg, D.jpg, E.jpg, F.jpg</b> naam se save kar dena. ❤️</p>
+    <div class="gallery">
+      <img src="A.jpg" alt="Memory A"><img src="B.jpg" alt="Memory B">
+      <img src="C.jpg" alt="Memory C"><img src="D.jpg" alt="Memory D">
+      <img src="E.jpg" alt="Memory E"><img src="F.jpg" alt="Memory F">
     </div>
-
-
-
-    <!-- ================= BIRTHDAY ================= -->
-
-    <div class="section" id="birthday">
-
-        <h2 class="section-title">
-            Happy Birthday, Babyy Gurll 🎂
-        </h2>
-
-        <div class="cake">
-            🎂
-        </div>
-
-        <div class="confetti">
-            ✨ 🌸 ✨
-        </div>
-
-        <p class="section-text">
-
-            Today is your day. 🌸
-
-            <br><br>
-
-            I hope this new year of your life
-            brings you countless reasons to smile,
-            peaceful moments,
-            beautiful memories,
-            and everything your heart wishes for.
-
-            <br><br>
-
-            Happy Birthday to someone
-            who makes ordinary moments
-            feel a little more special. 💗
-
-        </p>
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= SAD ================= -->
-
-    <div class="section" id="sad">
-
-        <h2 class="section-title">
-            When You're Sad 🥹
-        </h2>
-
-        <p class="section-text">
-
-            Agar kabhi aap sad ho,
-            toh please ye yaad rakhna...
-
-            <br><br>
-
-            Aapko har waqt strong rehne ki
-            zaroorat nahi hai.
-
-            <br><br>
-
-            Kuch din difficult ho sakte hain,
-            kuch moments heavy ho sakte hain,
-            aur ye completely okay hai.
-
-            <br><br>
-
-            Bas ek bad day ko
-            apni poori story mat samajhna. 🌸
-
-            <br><br>
-
-            Better days bhi aayenge. 🤍
-
-        </p>
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= HAPPY ================= -->
-
-    <div class="section" id="happy">
-
-        <h2 class="section-title">
-            When You're Happy 🌸
-        </h2>
-
-        <p class="section-text">
-
-            Jab aap genuinely happy hoti hain na...
-
-            <br><br>
-
-            bas aise hi smile karti rehna. 🥹
-
-            <br><br>
-
-            Aapki happiness ko kisi
-            explanation ki zaroorat nahi.
-
-            <br><br>
-
-            Enjoy the moment.
-            Laugh a little louder.
-            Smile a little longer.
-
-            <br><br>
-
-            You deserve beautiful moments. 💗
-
-        </p>
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= EMOTIONAL ================= -->
-
-    <div class="section" id="emotional">
-
-        <h2 class="section-title">
-            When You're Emotional 🫂
-        </h2>
-
-        <p class="section-text">
-
-            Kuch feelings ko explain karna
-            zaroori nahi hota.
-
-            <br><br>
-
-            Kabhi bas thoda rukna,
-            breathe karna,
-            aur khud ko time dena enough hota hai.
-
-            <br><br>
-
-            Jo feel kar rahi ho,
-            usse feel karne do.
-
-            <br><br>
-
-            You don't have to have
-            everything figured out today. 🤍
-
-        </p>
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= LOVE LETTER ================= -->
-
-    <div class="section" id="letter">
-
-        <h2 class="section-title">
-            A Special Letter For You 💌
-        </h2>
-
-        <p class="section-text">
-            There's something waiting inside...
-        </p>
-
-
-        <div class="envelope" onclick="openLetter()">
-
-            <span>
-                Tap to open 💗
-            </span>
-
-        </div>
-
-
-        <div class="letter" id="loveLetter">
-
-            <h3 style="text-align:center;margin-bottom:20px;">
-                Dear Babyy Gurll,
-            </h3>
-
-            <p>
-
-                I don't really know how to put everything
-                I feel into a few words.
-
-                <br><br>
-
-                But today, on your birthday,
-                I just want you to know that
-                you are genuinely special to me.
-
-                <br><br>
-
-                There are moments I remember,
-                little conversations,
-                random smiles,
-                and tiny things that somehow
-                became important to me.
-
-                <br><br>
-
-                I hope life gives you the kind of happiness
-                that stays.
-
-                <br><br>
-
-                Keep smiling.
-                Keep being yourself.
-                And never forget how precious
-                your existence is.
-
-                <br><br>
-
-                Happy Birthday, Babyy Gurll. 🌸
-
-                <br><br>
-
-                With lots of love,<br>
-                <b>— Yours 💗</b>
-
-            </p>
-
-        </div>
-
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= MEMORIES ================= -->
-
-    <div class="section" id="memories">
-
-        <h2 class="section-title">
-            Our Memories 📸
-        </h2>
-
-        <div class="memory-placeholder">
-
-            <p>
-                Our little memories will live here. 🌸
-            </p>
-
-            <br>
-
-            <p>
-                Photos, dates, little stories
-                and moments we'll never forget.
-            </p>
-
-        </div>
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= REASONS ================= -->
-
-    <div class="section" id="reasons">
-
-        <h2 class="section-title">
-            Why You're Special 💖
-        </h2>
-
-
-        <div class="reason">
-            🌸 The way you can make an ordinary moment special.
-        </div>
-
-        <div class="reason">
-            🥹 The little things you do without realizing.
-        </div>
-
-        <div class="reason">
-            💗 The memories that somehow stay in my mind.
-        </div>
-
-        <div class="reason">
-            🌙 The person you are when nobody is watching.
-        </div>
-
-        <div class="reason">
-            ✨ And simply because you're you.
-        </div>
-
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
-
-
-    <!-- ================= FINAL ================= -->
-
-    <div class="section" id="final">
-
-        <h2 class="section-title">
-            One Last Surprise 🌙
-        </h2>
-
-        <p class="section-text">
-
-            If you've reached here...
-
-            <br><br>
-
-            then you probably explored
-            this little world I made for you.
-
-            <br><br>
-
-            And honestly...
-
-            <br><br>
-
-            I hope every little page
-            made you smile at least once. 🌸
-
-            <br><br>
-
-            Because that's all I wanted.
-
-            <br><br>
-
-            <b>
-                Happy Birthday, Babyy Gurll. 💗
-            </b>
-
-            <br><br>
-
-            May your life always be
-            full of beautiful chapters.
-
-        </p>
-
-        <button class="back" onclick="goBack()">
-            ← Back
-        </button>
-
-    </div>
-
+    <button class="back" onclick="goBack()">← Back</button>
+  </section>
 
 </div>
+</main>
 
-</section>
+<div id="viewer" class="video-viewer">
+  <div class="video-box">
+    <button class="close" onclick="closeVideo()">×</button>
+    <video id="bigVideo" controls playsinline></video>
+  </div>
+</div>
 
-
+<button id="musicBtn" class="music" onclick="toggleMusic()" style="display:none">🎵 Music</button>
 
 <script>
+const music=document.getElementById('music');
+const musicBtn=document.getElementById('musicBtn');
 
-
-function enterWebsite(){
-
-    document.getElementById("opening").style.display="none";
-
-    document.getElementById("main").style.display="block";
-
-    window.scrollTo(0,0);
-
+function setMusic(file){
+  music.pause();
+  music.src=file;
+  music.currentTime=0;
+  music.play().catch(()=>{});
+  musicBtn.textContent="🎵 Music";
 }
-
-
-function openSection(id){
-
-    document.querySelector(".menu").style.display="none";
-
-    document.querySelector(".header").style.display="none";
-
-    document.querySelectorAll(".section").forEach(function(section){
-
-        section.classList.remove("active");
-
-    });
-
-    document.getElementById(id).classList.add("active");
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
+function enterSite(){
+  document.getElementById('opening').style.display='none';
+  document.getElementById('site').style.display='block';
+  musicBtn.style.display='block';
+  setMusic('happy.mp3');
+  window.scrollTo(0,0);
 }
-
-
+function openSection(id,song){
+  document.getElementById('menu').style.display='none';
+  document.querySelector('.header').style.display='none';
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  setMusic(song);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 function goBack(){
-
-    document.querySelectorAll(".section").forEach(function(section){
-
-        section.classList.remove("active");
-
-    });
-
-    document.querySelector(".menu").style.display="grid";
-
-    document.querySelector(".header").style.display="block";
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('menu').style.display='grid';
+  document.querySelector('.header').style.display='block';
+  setMusic('happy.mp3');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function openLetter(){document.getElementById('loveLetter').classList.add('show')}
+function showVideos(){document.getElementById('videos').style.display='block'}
+function playVideo(file){
+  const viewer=document.getElementById('viewer'), v=document.getElementById('bigVideo');
+  v.src=file; viewer.classList.add('show'); v.play().catch(()=>{});
+}
+function closeVideo(){
+  const v=document.getElementById('bigVideo'); v.pause(); v.removeAttribute('src'); v.load();
+  document.getElementById('viewer').classList.remove('show');
+}
+function toggleMusic(){
+  if(music.paused){music.play().catch(()=>{});musicBtn.textContent='⏸ Music'}
+  else{music.pause();musicBtn.textContent='🎵 Music'}
 }
 
-
-function openLetter(){
-
-    document.getElementById("loveLetter").classList.add("show");
-
-}
-
-
+const loves=[
+"I love you baby ❤️","I love you jaanu 😘","I love you meri jaan ❤️","I love you cutie pie 🥰",
+"I love you sweetheart 💕","I love you meri princess 👑","I love you meri rani ❤️","I love you meri duniya 🌍",
+"I love you meri pari 🧚‍♀️","I love you meri angel 😇","I love you meri zindagi ❤️","I love you meri khushi 😊",
+"I love you meri gudiya 🧸","I love you meri pagli 😘","I love you meri babu ❤️","I love you meri doll 🥰",
+"I love you meri sunshine ☀️","I love you meri moon 🌙","I love you meri star ⭐","I love you meri heartbeat 💓",
+"I love you meri jaaneman 💕","I love you meri shona 😘","I love you meri chandni 🌙💕","I love you meri mohabbat ❤️",
+"I love you meri rooh 💖","I love you meri muskaan 😊","I love you meri smile 😍","I love you meri aadat 💞",
+"I love you meri taakat 💪❤️","I love you meri weakness 🥺💕","I love you meri lucky charm 🍀","I love you meri dream girl ✨",
+"I love you meri future wife ❤️","I love you meri better half 💕","I love you meri soulmate 💖","I love you meri lifeline ❤️",
+"I love you meri everything 🥰","I love you meri world 🌎","I love you meri favorite person 💕","I love you meri cute queen 👑",
+"I love you meri beautiful girl 🌹","I love you meri sweet baby ❤️","I love you meri honey 🍯💕","I love you meri darling 😘",
+"I love you meri love ❤️","I love you meri pyari si jaan 🥰","I love you meri cutest girl 💖","I love you meri sweetu 😘",
+"I love you meri jaan ki jaan ❤️","I love you meri puri kaynaat 🌍❤️","I love you endlessly ♾️💕","I love you forever ❤️",
+"I love you more every day 💖","I love you beyond words 🥰","I love you to the moon and back 🌙❤️","I love you so much jaanu 😘",
+"I love you infinitely 💞","I love you with all my heart ❤️","I love you more than anything 💖","I love you forever and always 🥰",
+"I love you my happiness 😊❤️","I love you my peace 🕊️💕","I love you my comfort zone 🤗❤️","I love you my home 🏡💖",
+"I love you my reason to smile 😊💕","I love you my best gift 🎁❤️","I love you my blessing 🙏💕","I love you my sunshine girl ☀️❤️",
+"I love you my moonlight 🌙💖","I love you my rose 🌹💕","I love you my sweet heart ❤️🥰","I love you my favorite hello 👋💕",
+"I love you my sweetest memory 📸❤️","I love you my happy place 😊💖","I love you my miracle ✨❤️","I love you my destiny 💕",
+"I love you my forever person ❤️","I love you my true love 💖","I love you my heartbeat forever 💓💕","I love you my queen forever 👑❤️",
+"I love you meri sabse pyari aadat 💕","I love you meri har khushi ❤️","I love you meri har dua 🤲💕","I love you meri har subah ☀️❤️",
+"I love you meri har shaam 🌆💖","I love you meri har dhadkan 💓💕","I love you meri har muskaan 😊❤️","I love you meri har mannat 💖",
+"I love you meri har umeed 🌟❤️","I love you meri har khwahish 💕","I love you meri pyari si duniya 🌍❤️","I love you meri sweet princess 👑💕",
+"I love you meri lovely angel 😇❤️","I love you meri cute si pagli 😘💖","I love you meri beautiful queen 👑💕","I love you meri sweetest jaan ❤️🥰",
+"I love you meri one and only 💖","I love you meri forever wali girl ❤️","I love you meri jaanu baby 😘💕","I love you meri puri duniya aur kaynaat 🌍❤️✨"
+];
+document.getElementById('loveList').innerHTML=loves.map((x,i)=>`<div class="love-line">${i+1}. ${x}</div>`).join('');
 </script>
-
-
 </body>
 </html>
